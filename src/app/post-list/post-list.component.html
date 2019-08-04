@@ -1,0 +1,32 @@
+<div class="row"> <div class="col-sm-8">
+  <h2>Nos posts</h2>
+  <button class="btn btn-primary" (click)="OnNewPost()" title="Add post"[ngStyle]="{marginBottom: '10px'}"><fa name="plus"></fa> New post</button>
+<br>
+  <ul class="list-group">
+    <li *ngFor="let post of post; let i = index" [ngClass]="{'list-group-item':true,
+'list-group-item-danger':post.nombreLike < 0,
+'list-group-item-success': post.nombreLike > 0}" >
+      <div class="col-xs-12">
+        <div class="col-xs-4"> <h4 >{{post.title}}</h4></div>
+        <div class="col-xs-4"></div>
+        <div class="col-xs-4 pull-left">
+          <button class="btn btn-default pull-right" (click)="onShowPost (i)" title="Detail post"><fa name="bars"></fa></button>
+          <button class="btn btn-danger pull-right" (click)="onDeletePost(post)" title="Remove post"><fa name="minus"></fa></button>
+        </div>
+      </div>
+      {{post.description}}
+      <div class="row">
+        <div class="col-sm-12">
+          <button class="btn btn-success"
+                  (click)="love(post)" [ngStyle]="{marginRight: '10px'}">Love it </button>
+          <button class="btn btn-danger"
+                  (click)="notlove(post)">Dont love it'</button>
+        </div>
+      </div>
+
+
+
+    </li>
+
+</ul>
+</div> </div>

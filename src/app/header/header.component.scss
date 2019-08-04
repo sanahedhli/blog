@@ -1,0 +1,17 @@
+.navPost {
+   background-color: #150f0f;
+  color: #fff;
+}
+
+.navPost >li:hover {
+  background-color: orangered;
+  color: #fff;
+}
+.nav > li > a {
+  color: #ffffff;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: #f97708;
+  border: 1px solid #f97708;
+}

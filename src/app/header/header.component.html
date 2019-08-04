@@ -1,0 +1,23 @@
+<nav class="navbar navPost">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active">
+        <a routerLink="posts"><fa name="bars"></fa> Posts</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="posts/new"><fa name="plus"></fa> Nouveau post</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li routerLinkActive="active" >
+        <a routerLink="auth/sigup" *ngIf="!isAuth"><fa name="edit"></fa> Creer un compte</a>
+      </li>
+      <li routerLinkActive="active" >
+        <a routerLink="auth/sigin" *ngIf="!isAuth"><fa name="sign-in"></fa> Connection</a>
+      </li>
+      <li>
+        <a (click)="onSignOut()" style="cursor: pointer;" *ngIf="isAuth"><fa name="power-off"></fa> Déconection</a>
+      </li>
+    </ul>
+  </div>
+</nav>

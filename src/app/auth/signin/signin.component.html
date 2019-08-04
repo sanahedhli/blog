@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-offset-2 col-sm-8 backAriere">
+    <h3>Connection</h3>
+    <form (ngSubmit)="onSubmit()" [formGroup]="signInForm">
+      <div class="form-group">
+        <label for="email"></label>
+        <input type="text" class="form-control" id="email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="password"></label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="signInForm.invalid"> connection </button>
+    </form>
+    <p class="text-danger">{{errorMessage}}</p>
+  </div>
+</div>
